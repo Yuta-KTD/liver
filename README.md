@@ -1,4 +1,4 @@
 # liver
 
-[チュートリアル](https://docs.flutter.dev/reference/tutorials)を試してみるリポジトリ
-publicにしたのに意味はないです
+Flutterで勉強したものをつらつら作っていく。
+まずはページごとにサンプルができるようにルーティング作ってみる
