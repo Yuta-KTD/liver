@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:liver/model/routes.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -19,7 +20,8 @@ class MainPage extends StatelessWidget {
               const SizedBox(height: 20.0),
               ElevatedButton(
                 child: const Text('Riverpod'),
-                onPressed: () => Navigator.of(context).pushNamed('/riverpod'),
+                onPressed: () => Navigator.of(context)
+                    .pushNamed(RouteNames.riverpodProviderPath),
               )
             ],
           ),

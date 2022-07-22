@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:liver/model/routes.dart';
 import 'package:liver/pages/main_page.dart';
-import 'package:liver/pages/riverpod_provider_test.dart';
+import 'package:liver/pages/riverpod_provider_screen.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
       home: const MainPage(),
       initialRoute: RouteNames.mainPage,
       routes: <String, WidgetBuilder>{
-        RouteNames.riverpodProviderTest: (BuildContext context) =>
-            const RiverpodProviderTest(),
+        RouteNames.riverpodProviderPath: (BuildContext context) =>
+            const RiverpodProviderScreen(),
       },
     );
   }
