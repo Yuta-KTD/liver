@@ -1,44 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:liver/provider/post_provider.dart';
+import 'package:liver/model/routes.dart';
+import 'package:liver/pages/main_page.dart';
+import 'package:liver/pages/riverpod_provider_test.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends ConsumerWidget {
+class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final postAsyncValue = ref.watch(postsProvider);
+  Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter demo',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('flutter_riverpodでhttpやってみる!'),
-          backgroundColor: Colors.lightBlue,
-        ),
-        body: Center(
-          child: postAsyncValue.when(
-            data: (posts) {
-              return ListView.builder(
-                itemCount: 99,
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text(posts[index].title),
-                    subtitle: Text(posts[index].userId.toString()),
-                  );
-                },
-              );
-            },
-            error: (error, stack) => Center(
-              child: Text(error.toString()),
-            ),
-            loading: (() => const Center(child: CircularProgressIndicator())),
-          ),
-        ),
-      ),
+      home: const MainPage(),
+      initialRoute: RouteNames.mainPage,
+      routes: <String, WidgetBuilder>{
+        RouteNames.riverpodProviderTest: (BuildContext context) =>
+            const RiverpodProviderTest(),
+      },
     );
   }
 }
