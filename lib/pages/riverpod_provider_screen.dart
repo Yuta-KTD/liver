@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:liver/provider/post_provider.dart';
 
-class RiverpodProviderTest extends ConsumerWidget {
-  const RiverpodProviderTest({Key? key}) : super(key: key);
+class RiverpodProviderScreen extends ConsumerWidget {
+  const RiverpodProviderScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
