@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:liver/model/routes.dart';
+import 'package:liver/pages/clip_board_screen.dart';
 import 'package:liver/pages/main_page.dart';
 import 'package:liver/pages/riverpod_provider_screen.dart';
 import 'package:liver/pages/text_field_screen.dart';
@@ -22,6 +23,8 @@ class MyApp extends StatelessWidget {
             const RiverpodProviderScreen(),
         RouteNames.textFieldPath: (BuildContext context) =>
             const TextFieldScreen(),
+        RouteNames.clipBoardPath: (BuildContext context) =>
+            const ClipBoardScreen(),
       },
     );
   }
