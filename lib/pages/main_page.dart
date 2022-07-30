@@ -29,6 +29,12 @@ class MainPage extends StatelessWidget {
                 onPressed: () =>
                     Navigator.of(context).pushNamed(RouteNames.textFieldPath),
               ),
+              const SizedBox(height: 14.0),
+              ElevatedButton(
+                child: const Text('ClipBoard'),
+                onPressed: () =>
+                    Navigator.of(context).pushNamed(RouteNames.clipBoardPath),
+              ),
             ],
           ),
         ),
