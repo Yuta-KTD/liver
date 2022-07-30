@@ -17,12 +17,18 @@ class MainPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const Text('勉強ページ！'),
-              const SizedBox(height: 20.0),
+              const SizedBox(height: 24.0),
               ElevatedButton(
                 child: const Text('Riverpod'),
                 onPressed: () => Navigator.of(context)
                     .pushNamed(RouteNames.riverpodProviderPath),
-              )
+              ),
+              const SizedBox(height: 14.0),
+              ElevatedButton(
+                child: const Text('TextField'),
+                onPressed: () =>
+                    Navigator.of(context).pushNamed(RouteNames.textFieldPath),
+              ),
             ],
           ),
         ),

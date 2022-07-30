@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:liver/model/routes.dart';
 import 'package:liver/pages/main_page.dart';
 import 'package:liver/pages/riverpod_provider_screen.dart';
+import 'package:liver/pages/text_field_screen.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -19,6 +20,8 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         RouteNames.riverpodProviderPath: (BuildContext context) =>
             const RiverpodProviderScreen(),
+        RouteNames.textFieldPath: (BuildContext context) =>
+            const TextFieldScreen(),
       },
     );
   }
