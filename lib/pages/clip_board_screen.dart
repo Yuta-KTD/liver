@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -70,10 +72,13 @@ class _ClipBoardState extends State<ClipBoardForm> {
 
   _clipText() async {
     final data = ClipboardData(text: clipedText);
-    await Clipboard.setData(data);
-    // TODO: トーストとかにする
-    // TODO: トーストカスタムできるのかな？
-    print('コピーしました。');
+    final dataText = data.text;
+    await Clipboard.setData(data).then((_) {
+      if (Platform.isAndroid) {
+        ScaffoldMessenger.of(context)
+            .showSnackBar(SnackBar(content: Text("$dataTextをコピーしました")));
+      }
+    });
   }
 
   _focusField() {
