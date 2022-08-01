@@ -11,7 +11,6 @@ class ClipBoardScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Clip Board'),
-        backgroundColor: Colors.tealAccent,
       ),
       body: const Center(
         child: ClipBoardForm(),

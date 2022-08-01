@@ -15,7 +15,6 @@ class RiverpodProviderScreen extends ConsumerWidget {
           icon: const Icon(Icons.arrow_back),
         ),
         title: const Text('flutter_riverpod'),
-        backgroundColor: Colors.blue,
         automaticallyImplyLeading: true,
       ),
       body: Center(
