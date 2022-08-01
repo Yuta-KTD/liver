@@ -9,7 +9,6 @@ class TextFieldScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('textField'),
-        backgroundColor: Colors.cyan,
       ),
       body: const Center(
         child: TextFieldForm(),

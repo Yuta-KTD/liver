@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: const MainPage(),
       initialRoute: RouteNames.mainPage,
+      theme: ThemeData.dark(),
       routes: <String, WidgetBuilder>{
         RouteNames.riverpodProviderPath: (BuildContext context) =>
             const RiverpodProviderScreen(),
@@ -26,6 +27,11 @@ class MyApp extends StatelessWidget {
         RouteNames.clipBoardPath: (BuildContext context) =>
             const ClipBoardScreen(),
       },
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.amber,
+        fontFamily: 'NotoSansCJKJp',
+      ),
     );
   }
 }
