@@ -10,16 +10,37 @@ class StateNotifierProviderScreen extends ConsumerWidget {
     // StateNotifierのサブクラスはStateNotifireProviderインスタンスで.notifierを指定することで取得できる
     final countStateController = ref.read(countNotifierProvider.notifier);
     // StateNotifierのStateはStateNotifierのインスタンスを指定することで取得できる
-    final count = ref.watch(countNotifierProvider);
+    final countWatch = ref.watch(countNotifierProvider);
+    final countRead = ref.read(countNotifierProvider);
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('StateNotiferProvider Test'),
       ),
       body: Center(
-        child: Text(
-          count.toString(),
-          style: const TextStyle(fontSize: 30),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'Watch',
+              style: TextStyle(fontSize: 20),
+            ),
+            Text(
+              countWatch.toString(),
+              style: const TextStyle(fontSize: 30),
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
+            const Text(
+              'Read',
+              style: TextStyle(fontSize: 20),
+            ),
+            Text(
+              countRead.toString(),
+              style: const TextStyle(fontSize: 30),
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
