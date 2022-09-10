@@ -47,6 +47,12 @@ class MainPage extends StatelessWidget {
                     .pushNamed(RouteNames.stateNotifierPath),
                 child: const Text('StateNotifierRiverpod'),
               ),
+              const SizedBox(height: 14.0),
+              ElevatedButton(
+                onPressed: () => Navigator.of(context)
+                    .pushNamed(RouteNames.futureProviderPath),
+                child: const Text('futureProviderRiverpod'),
+              ),
             ],
           ),
         ),

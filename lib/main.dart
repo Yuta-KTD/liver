@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:liver/model/routes.dart';
 import 'package:liver/pages/basic_provider_screen.dart';
 import 'package:liver/pages/clip_board_screen.dart';
+import 'package:liver/pages/future_provider_screen.dart';
 import 'package:liver/pages/main_page.dart';
 import 'package:liver/pages/riverpod_provider_screen.dart';
 import 'package:liver/pages/state_notifier_provider.dart';
@@ -31,6 +32,8 @@ class MyApp extends StatelessWidget {
         RouteNames.basicProviderPath: (context) => const BasicProviderScreen(),
         RouteNames.stateNotifierPath: (context) =>
             const StateNotifierProviderScreen(),
+        RouteNames.futureProviderPath: (context) =>
+            const FutureProviderScreen(),
       },
       darkTheme: ThemeData(
         brightness: Brightness.dark,
