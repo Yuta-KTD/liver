@@ -36,6 +36,7 @@ class StateNotifierProviderScreen extends ConsumerWidget {
               'Read',
               style: TextStyle(fontSize: 20),
             ),
+            // watchしているものがあると、同じタイミングでリビルドが走るので値が更新されてしまう
             Text(
               countRead.toString(),
               style: const TextStyle(fontSize: 30),
