@@ -35,6 +35,24 @@ class MainPage extends StatelessWidget {
                 onPressed: () =>
                     Navigator.of(context).pushNamed(RouteNames.clipBoardPath),
               ),
+              const SizedBox(height: 14.0),
+              ElevatedButton(
+                onPressed: () => Navigator.of(context)
+                    .pushNamed(RouteNames.basicProviderPath),
+                child: const Text('BasicRiverpod'),
+              ),
+              const SizedBox(height: 14.0),
+              ElevatedButton(
+                onPressed: () => Navigator.of(context)
+                    .pushNamed(RouteNames.stateNotifierPath),
+                child: const Text('StateNotifierRiverpod'),
+              ),
+              const SizedBox(height: 14.0),
+              ElevatedButton(
+                onPressed: () => Navigator.of(context)
+                    .pushNamed(RouteNames.futureProviderPath),
+                child: const Text('futureProviderRiverpod'),
+              ),
             ],
           ),
         ),
